@@ -19,9 +19,13 @@
     </span>
 
     {%- if post.header !== false %}
-      <header class="post-header">
+      {% if post.cover %}
+      <header class="post-header post-cover" style="position: relative;">
+      {%-else %}
+      <header class="post-header " style="position: relative;">
+      {%- endif %}
         {% if post.cover %}<{% endif %}{% if post.cover %}img class="cover" src="{{post.cover}}"></img>{% endif %}
-        <{%- if is_index %}h2{% else %}h1{%- endif %} class="post-title{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="name headline">
+        <{%- if is_index %}h2{% else %}h1{%- endif %} class="post-title{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="name headline" style="{% if post.cover %}position: absolute;bottom: 60px;left: 20px;{% endif %}">
           {# Link posts #}
           {%- if post.link %}
             {%- if post.sticky > 0 %}
