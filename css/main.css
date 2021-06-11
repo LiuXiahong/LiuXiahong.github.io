@@ -171,17 +171,27 @@ template {
 [hidden] {
   display: none;
 }
+html,
+body {
+  height: 100%;
+  overflow-y: overlay;
+}
 ::selection {
   background: #00c4b6;
   color: #f7f7f7;
 }
-html,
-body {
-  height: 100%;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #49b1f5;
 }
 body {
-  background: url("https://gitee.com/LiuXiahong86/Figure-bed/raw/master/img/Blog_background/background_1.jpg") no-repeat center fixed;
-  opacity: 0.8;
   color: var(--text-color);
   font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1em;
@@ -189,6 +199,16 @@ body {
   min-height: 100%;
   position: relative;
   transition: padding 0.2s ease-in-out;
+}
+.background {
+  background-size: cover;
+  filter: blur(30px);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 h1,
 h2,
@@ -1612,12 +1632,32 @@ pre code {
   color: #999;
   font-size: 0.875em;
   padding: 20px 0;
+  opacity: 0.5 !important;
+  margin-top: 25px !important;
+  background-color: #000;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .footer.footer-fixed {
   bottom: 0;
   left: 0;
   position: absolute;
   right: 0;
+}
+@media (min-width: 1200px) {
+  .footer {
+    width: 908px;
+    margin: auto;
+    transform: translate(120px);
+  }
+}
+@media (min-width: 1600px) {
+  .footer {
+    width: 57.5%;
+    margin: auto;
+    margin-left: 465px;
+  }
 }
 .footer-inner {
   box-sizing: border-box;
@@ -2179,6 +2219,7 @@ pre code {
 }
 .post-copyright {
   position: relative;
+  border-radius: 20px;
   line-height: 1.2;
   font-size: 1rem;
   background: var(--card-bg-color);
@@ -2656,9 +2697,7 @@ mark.search-keyword {
   animation-fill-mode: both;
 }
 .header-inner {
-  background: var(--content-bg-color);
   border-radius: initial;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   width: 240px;
 }
 @media (max-width: 991px) {
@@ -2700,9 +2739,6 @@ mark.search-keyword {
     border-radius: initial;
     width: 100%;
   }
-}
-.footer-inner {
-  padding-left: 252px;
 }
 @media (max-width: 991px) {
   .footer-inner {
@@ -2783,6 +2819,16 @@ mark.search-keyword {
   float: right;
   padding: 2px 5px;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+}
+.main-menu.menu li a {
+  padding: 0 36px;
+  color: #9ca2a8;
+  transition: all 0.35s ease-out;
+  border-radius: 13px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 8px;
 }
 .main-menu .menu-item-active::after {
   background: #bbb;
@@ -2971,7 +3017,7 @@ mark.search-keyword {
     padding: 10px 12px;
   }
 }
-img.cover {
+.cover img {
   border-radius: 20px;
 }
 h2.post-title {
@@ -3002,7 +3048,7 @@ span.exturl {
 .comments,
 .post-content,
 .post-block,
-.header-inner {
+.site-brand-container {
   border-radius: 20px !important;
 }
 .btn {
@@ -3016,11 +3062,6 @@ span.exturl {
 }
 .posts-expand .post-title-link::before {
   background-color: #49b1f5;
-}
-.footer {
-  opacity: 0.5 !important;
-  margin-top: 25px;
-  background-color: #000;
 }
 .post-meta {
   margin: 10px 0px;
