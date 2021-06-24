@@ -57,17 +57,21 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-
   <!--浏览器搞笑标题-->
-  <script type="text/javascript" src="\js\crash_cheat.js"></script>
   
-    <script src="js/third-party/live2d/autoload.js"></script>
   
-    <script src="js/third-party/hitokoto/hitokoto.js"></script>
+  
+    <script src="/js/third-party/live2d/autoload.js"></script>
+
+  
+    <script src="/js/third-party/hitokoto/hitokoto.js"></script>
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="background"  style="background: url(https://gitee.com/LiuXiahong86/Figure-bed/raw/master/img/Blog_background/background_1.jpg) no-repeat center fixed;"></div>
+  
+  <div class="background" style="background-image: url(https://gitee.com/LiuXiahong86/Figure-bed/raw/master/img/Blog_background/background_1.jpg)"></div>
+  
   <div class="headband"></div>
 
   <main class="main">
@@ -88,6 +92,7 @@
       <h1 class="site-title">几何数论</h1>
       <i class="logo-line"></i>
     </a>
+      <p id="hitokoto" itemprop="description" ></p>
   </div>
 
   <div class="site-nav-right">
@@ -262,7 +267,7 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/posts/hello-world/" itemprop="url" >
+          <a class="post-title-link" href="/posts/hello-world/" itemprop="url">
             <span itemprop="name">Hello World</span>
           </a>
       </div>
@@ -295,25 +300,8 @@
 
 
 <span id="sitetime"></span>
-<div class="wordcount">
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-line"></i>
-    </span>
-    <span title="站点总字数">0k</span>
-  </span>
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">1 分钟</span>
-  </span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
 
-
-<script language=javascript>
+<script language="javascript">
     function siteTime() {
         window.setTimeout("siteTime()", 1000);
         var seconds = 1000;
@@ -341,6 +329,25 @@
     }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
     siteTime();
 </script>
+
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">0k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+
     </div>
   </footer>
 

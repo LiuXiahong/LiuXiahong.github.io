@@ -35,9 +35,15 @@
       <link href="posts/test/"/>
       <url>posts/test/</url>
       
-        <content type="html"><![CDATA[<p>Hello</p><span id="more"></span><p>World!</p>]]></content>
+        <content type="html"><![CDATA[<blockquote class="blockquote-center"><p>世间所有的相遇，都是久别重逢</p></blockquote><span id="more"></span><div class="note default"><p>default 提示块标签</p></div><div class="note primary"><p>primary 提示块标签</p></div><div class="note success"><p>success 提示块标签</p></div><div class="note info"><p>info 提示块标签</p></div><div class="note warning"><p>warning 提示块标签</p></div><div class="note danger"><p>danger 提示块标签</p></div>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 博客测试 </tag>
+            
+        </tags>
       
     </entry>
     
